@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+source "$DOTLY_PATH/shell/zsh/themes/prompt_javily_setup"
+
+prompt_javilytv_setup() {
+  prompt_javily_setup "$@"
+}
+
+prompt_javilytv_setup "${@}"
