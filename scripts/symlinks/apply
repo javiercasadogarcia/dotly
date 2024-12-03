@@ -8,7 +8,9 @@ symlinks::apply() {
 	local -r CONFIG="$DOTFILES_PATH/symlinks/$1"
 	shift
 
-	echo
+	log::file "CONFIG: $CONFIG"
+	log::file "DOTFILES_PATH: $DOTFILES_PATH"
+	log::file "@: $@"
 	"$DOTLY_PATH/modules/dotbot/bin/dotbot" -d "$DOTFILES_PATH" -c "$CONFIG" "$@"
 	echo
 }
