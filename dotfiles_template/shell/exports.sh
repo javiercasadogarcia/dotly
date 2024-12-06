@@ -27,9 +27,9 @@ export FZF_DEFAULT_OPTS="--color=$fzf_colors --reverse"
 # ------------------------------------------------------------------------------
 # Path - The higher it is, the more priority it has
 # ------------------------------------------------------------------------------
-path=`echo "$PATH" | sed -e 's/:/ /g'`
+prev=`echo "$PATH" | sed -e 's/:/\n/g'`
 
-path+=(
+path=(
 	"$HOME/bin"
 	"$DOTLY_PATH/bin"
 	"$DOTFILES_PATH/bin"
@@ -47,5 +47,9 @@ path+=(
 	"/usr/sbin"
 	"/sbin"
 )
+
+for dir in `echo "$prev"`; do
+    path+="$dir"
+done
 
 export path
