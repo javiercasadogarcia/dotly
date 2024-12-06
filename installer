@@ -140,7 +140,7 @@ if ! command_exists curl; then
 fi
 
 _a "Initializing your dotfiles git repository"
-git init 2>&1 | _log "Initializing repository"
+git init -b main 2>&1 | _log "Initializing repository"
 
 _a "Cloning dotly"
 git submodule add -b "$DOTLY_BRANCH" "https://github.com/$DOTLY_REPOSITORY.git" "$dotly_inner_path" 2>&1 | _log "Adding dotly submodule"
