@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+source "$DOTLY_PATH/shell/zsh/themes/prompt_javi_setup"
+
+prompt_javi_config() {
+  prompt_javi_setup "$@"
+}
+
+prompt_javi_config "${@}"
