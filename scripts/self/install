@@ -31,7 +31,7 @@ touch "$HOME/.z"
 
 if ! str::contains zsh "$SHELL"; then
 	output::answer "Setting zsh as the default shell"
-	sudo chsh -s "$(command -v zsh)" | log::file "Setting zsh as default shell"
+	chsh -s "$(which zsh)" $USER | log::file "Setting zsh as default shell"
 fi
 
 output::answer "Installing Zim"
