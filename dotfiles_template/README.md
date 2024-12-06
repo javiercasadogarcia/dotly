@@ -16,12 +16,12 @@
 
 Using wget
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/CodelyTV/dotly/HEAD/restorer)
+bash <(wget -qO- https://raw.githubusercontent.com/javiercasadogarcia/dotly/HEAD/restorer)
 ```
 
 Using curl
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/CodelyTV/dotly/HEAD/restorer)
+bash <(curl -s https://raw.githubusercontent.com/javiercasadogarcia/dotly/HEAD/restorer)
 ```
 
 You need to know your GitHub username, repository and install ssh key if your repository is private.
