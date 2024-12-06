@@ -1,18 +1,7 @@
 <div align="center">
-  <a href="https://codely.tv">
-    <img src="https://user-images.githubusercontent.com/1331435/141520189-90349bbd-3e0f-4200-8b76-f4297be11898.png" />
-  </a>
-</div>
-<div align="center">
   <h1>⚡️ Simple and fast dotfiles framework ⚡️</h1>
   <strong>The path to increasing your productivity on macOS, Linux and WSL</strong>
 </div>
-<br>
-<p align="center">
-    <a href="https://github.com/CodelyTV"><img src="https://img.shields.io/badge/CodelyTV-OS-green.svg?style=flat-square" alt="codely.tv"/></a>
-    <a href="https://pro.codely.tv"><img src="https://img.shields.io/badge/CodelyTV-PRO-black.svg?style=flat-square" alt="CodelyTV Courses"/></a>
-    <a href="https://github.com/CodelyTV/dotly/actions"><img src="https://github.com/CodelyTV/dotly/workflows/CI/badge.svg" alt="CI pipeline status"/></a>
-</p>
 
 dotly is a dotfiles framework built on top of [zim](https://github.com/zimfw/zimfw), one of the fastest zsh existing
 frameworks. It creates an opinionated dotfiles structure to handle all your configs and scripts.
@@ -22,13 +11,13 @@ frameworks. It creates an opinionated dotfiles structure to handle all your conf
 Using wget:
 
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/CodelyTV/dotly/HEAD/installer)
+bash <(wget -qO- https://raw.githubusercontent.com/javiercasadogarcia/dotly/HEAD/installer)
 ```
 
 Or using curl:
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/CodelyTV/dotly/HEAD/installer)
+bash <(curl -s https://raw.githubusercontent.com/javiercasadogarcia/dotly/HEAD/installer)
 ```
 
 ## 🐳 Try it in Docker
@@ -42,7 +31,7 @@ deleted.
 ```bash
 docker run -e TERM -e COLORTERM -e LC_ALL=C.UTF-8 -w /root -it --rm alpine sh -uec '
   apk add curl sudo bash zsh git g++ python3
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/CodelyTV/dotly/HEAD/installer)"
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/javiercasadogarcia/dotly/HEAD/installer)"
   zsh'
 ```
 </details>
@@ -54,7 +43,7 @@ docker run -e TERM -e COLORTERM -e LC_ALL=C.UTF-8 -w /root -it --rm alpine sh -u
 docker run -e TERM -e COLORTERM -w /root -it --rm ubuntu sh -uec '
   apt-get update
   apt-get install -y curl build-essential sudo
-  su -c bash -c "$(curl -fsSL https://raw.githubusercontent.com/CodelyTV/dotly/HEAD/installer)"
+  su -c bash -c "$(curl -fsSL https://raw.githubusercontent.com/javiercasadogarcia/dotly/HEAD/installer)"
   su -c zsh'
 ```
 </details>
@@ -73,12 +62,12 @@ docker run -e TERM -e COLORTERM -w /root -it --rm ubuntu sh -uec '
 
 Using wget
 ```bash
-bash <(wget -qO- https://raw.githubusercontent.com/CodelyTV/dotly/HEAD/restorer)
+bash <(wget -qO- https://raw.githubusercontent.com/javiercasadogarcia/dotly/HEAD/restorer)
 ```
 
 Using curl
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/CodelyTV/dotly/HEAD/restorer)
+bash <(curl -s https://raw.githubusercontent.com/javiercasadogarcia/dotly/HEAD/restorer)
 ```
 
 🔒 You need to know your GitHub username, repository and install ssh key if your repository is private.
@@ -144,11 +133,11 @@ dotly includes an opinionated, minimal, very fast and powerful theme by default.
 following parameters in your `shell/exports.sh`:
 
 ```bash
-CODELY_THEME_MINIMAL=false|true  # If true the theme will only show the prompt status
-CODELY_THEME_MODE="dark"|"light" # Use dark if you use dark colors, light if light
-CODELY_THEME_PROMPT_IN_NEW_LINE=false|true           # If true the prompt will be in a newline
-CODELY_THEME_PWD_MODE="short"|"full"|"home_relative" # short will show the first letter of each directory, full the full path and home_relative the full path relative to the $HOME dir
-CODELY_THEME_STATUS_ICON_KO="▪" # The icon to show if the previous command failed. Useful if you're color blind
+JAVI_THEME_MINIMAL=false|true  # If true the theme will only show the prompt status
+JAVI_THEME_MODE="dark"|"light" # Use dark if you use dark colors, light if light
+JAVI_THEME_PROMPT_IN_NEW_LINE=false|true           # If true the prompt will be in a newline
+JAVI_THEME_PWD_MODE="short"|"full"|"home_relative" # short will show the first letter of each directory, full the full path and home_relative the full path relative to the $HOME dir
+JAVI_THEME_STATUS_ICON_KO="▪" # The icon to show if the previous command failed. Useful if you're color blind
 ```
 
 ### 💾 Default scripts
@@ -195,12 +184,6 @@ You can see the default aliases [here](dotfiles_template/shell/aliases.sh). The 
 * `la`: ls all files/dirs with colors
 * `up`: Update all your package managers packages
 
-## 📽️ Feature showcase (Spanish)
-
-For an in-depth look at the features offered by dotly, you can take a look at [this video](https://www.youtube.com/watch?v=kCBvPb8qAAE):
-
-[![Watch the video](https://img.youtube.com/vi/kCBvPb8qAAE/maxresdefault.jpg)](https://youtu.be/kCBvPb8qAAE)
-
 ## ⁉️ Troubleshooting
 
 You can execute `dot self debug` in parallel with another command to see the errors output.
@@ -212,7 +195,3 @@ You can execute `dot self debug` in parallel with another command to see the err
 ## 😊 Thanks
 
 A lot of dotly concepts has been inspired by [denisidoro/dotfiles](https://github.com/denisidoro/dotfiles)
-
-## ⚖️ LICENSE
-
-MIT © [CodelyTV](https://codely.tv)
