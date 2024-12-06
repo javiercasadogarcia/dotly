@@ -1,6 +1,6 @@
 export DOTFILES_PATH="XXX_DOTFILES_PATH_XXX"
 export DOTLY_PATH="$DOTFILES_PATH/modules/dotly"
-export DOTLY_THEME="codely"
+export DOTLY_THEME="javi"
 
 source "$DOTFILES_PATH/shell/init.sh"
 
