@@ -11,7 +11,7 @@ if platform::is_macos; then
 	install_macos_custom
 fi
 
-script::depends_on docpars fzf zsh python
+script::depends_on docpars fzf zsh python3
 
 ##? Install dotly and setup dotfiles
 ##?
