@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 PROMPT_COMMAND="javi_theme"
 
-MIDDLE_CHARACTER="☺"
+MIDDLE_CHARACTER="🗸"
 GREEN_COLOR="32"
 RED_COLOR="31"
 
@@ -12,7 +12,7 @@ javi_theme() {
 
 	if [ $LAST_CODE -ne 0 ]; then
 		STATUS_COLOR=$RED_COLOR
-		MIDDLE_CHARACTER="☹"
+		MIDDLE_CHARACTER="▪"
 	fi
 
 	if [ -z "$JAVI_THEME_MINIMAL" ]; then
